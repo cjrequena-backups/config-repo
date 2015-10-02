@@ -9,4 +9,4 @@ spring:
       password: 
 ---
 test:
-  props1: Hello World From Cloud
+  props1: TEST PROPEPERTY FROM CLOUD
