@@ -1,0 +1,12 @@
+spring:
+  profiles: default, dev, pre, prod
+  databases:
+    connections:
+    - driverClassName: org.h2.Driver
+      jndi: jdbc/Sample
+      url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password: 
+---
+test:
+  props1: Hello World From Cloud
