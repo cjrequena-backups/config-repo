@@ -6,6 +6,8 @@ info:
     
 spring:
   profiles: dev
+---
+spring:
   databases:
     connections:
     - driverClassName: org.h2.Driver
