@@ -1,0 +1,23 @@
+info:
+  app:
+    name: sample-service
+    description: My sample service
+    version: 1.0.0
+    
+spring:
+  profiles: dev
+  databases:
+    connections:
+    - driverClassName: org.h2.Driver
+      jndi: jdbc/Sample
+      url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password: 
+---
+spring:
+    redis:
+        host: 127.0.0.1
+        port: 6379     
+---
+test:
+  props1: TEST PROPEPERTY FROM CLOUD
