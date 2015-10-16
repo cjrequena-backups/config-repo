@@ -5,7 +5,8 @@ info:
     version: 1.0.0
     
 spring:
-  profiles: test
+  profiles: 
+    active: test
   redis:
         host: 127.0.0.1
         port: 6379     
