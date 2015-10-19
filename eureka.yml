@@ -1,33 +1,18 @@
 info:
   description: Eureka Server
-
 server:
   port: 8761
-
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-
+spring:
+  application:
+      name: eureka
 ---
 spring:
   profiles: dev
-  cloud:
-    config:
-      uri: http://user:${eureka.password:}@localhost:8761/eureka/
-application:
-  domain: ${APPLICATION_DOMAIN:cfapps.io}
 endpoints:
   restart: enabled
 eureka:
   password: s3cr3t
   instance:
-    hostname: ${vcap.application.uris[0]:localhost}
-    nonSecurePort: 80
-  client:
+    hostname: localhost
     serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
-
----
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
