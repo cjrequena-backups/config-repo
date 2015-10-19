@@ -1,10 +1,19 @@
 info:
-  author: Carlos Requena
+  description: Spring Cloud Samples
   
 eureka:
   hostname: localhost
-  username: username
-  password: password
+  password: secr3t
   client:
     serviceUrl:
-      defaultZone: http://${eureka.username}:${eureka.password}@localhost:8761/eureka/
+      defaultZone: http://user:${eureka.password:}@localhost:8761/eureka/
+  virtualHostName: ${spring.application.name}
+  leaseRenewalIntervalInSeconds: 10
+  statusPageUrlPath: /admin/info
+  healthCheckUrlPath: /admin/health
+  metadataMap:
+    instanceId: ${spring.application.name}
+    
+spring.cloud.stream.bindings:
+  springCloudBusInput: topic:springCloudBus
+  springCloudBusOutput: topic:springCloudBus
