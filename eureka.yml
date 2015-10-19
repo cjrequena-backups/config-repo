@@ -1,18 +1,4 @@
 info:
+  name: Eureka Service
   description: Eureka Server
-server:
-  port: 8761
-spring:
-  application:
-      name: eureka
----
-spring:
-  profiles: dev
-endpoints:
-  restart: enabled
-eureka:
-  password: s3cr3t
-  instance:
-    hostname: localhost
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  version: 

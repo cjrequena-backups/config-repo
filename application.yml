@@ -1,5 +1,6 @@
 info:
   description: Spring Cloud Samples
+  version: 
   
 eureka:
   hostname: localhost
