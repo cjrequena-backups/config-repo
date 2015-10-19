@@ -3,17 +3,8 @@ info:
   
 eureka:
   hostname: localhost
-  password: secr3t
+  password: s3cr3t
   client:
     serviceUrl:
       defaultZone: http://user:${eureka.password:}@localhost:8761/eureka/
-  virtualHostName: ${spring.application.name}
-  leaseRenewalIntervalInSeconds: 10
-  statusPageUrlPath: /admin/info
-  healthCheckUrlPath: /admin/health
-  metadataMap:
-    instanceId: ${spring.application.name}
-    
-spring.cloud.stream.bindings:
-  springCloudBusInput: topic:springCloudBus
-  springCloudBusOutput: topic:springCloudBus
+ 
