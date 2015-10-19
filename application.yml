@@ -1,0 +1,10 @@
+info:
+  author: Carlos Requena
+  
+eureka:
+  hostname: localhost
+  username: username
+  password: password
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.username}:${eureka.password}@localhost:8761/eureka/
