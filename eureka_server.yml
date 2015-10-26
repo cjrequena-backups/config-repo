@@ -2,7 +2,6 @@ info:
   name: Eureka Service
   description: Eureka Server
   version: 0.0.1
-
 endpoints:
   restart:
     enabled: true
@@ -10,11 +9,9 @@ endpoints:
     enabled: true
   health:
     sensitive: false
-
-
 server:
   port: 8761
-
+  
 eureka:
   instance:
     hostname: localhost

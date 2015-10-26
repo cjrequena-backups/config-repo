@@ -1,0 +1,12 @@
+info:
+  name: Feing-Client
+  description: Feing-Client
+  version: 1.0.0
+
+server:
+  port: 9100
+ 
+zuulserver:
+  ribbon:
+    listOfServers: localhost:8080
+  
