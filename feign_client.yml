@@ -6,7 +6,7 @@ info:
 server:
   port: 9100
  
-zuul_server:
+zuulserver:
   ribbon:
     listOfServers: localhost:8080
   
