@@ -1,0 +1,16 @@
+info:
+  name: Microservice-TWO
+  description: Microservice-TWO
+  version: 1.0.0
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+
+server:
+  port: 9001
