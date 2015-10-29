@@ -9,4 +9,6 @@ endpoints:
     enabled: true
   health:
     sensitive: false
+server:
+  port: 8888
   

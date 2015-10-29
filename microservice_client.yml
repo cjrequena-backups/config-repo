@@ -10,7 +10,7 @@ endpoints:
   health:
     sensitive: false
 server:
-  port: 9100
+  port: 9002
  
 zuulserver:
   ribbon:
