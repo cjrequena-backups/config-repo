@@ -1,6 +1,6 @@
 info:
-  name: Feing-Client
-  description: Feing-Client
+  name: Microservice-Client
+  description: Microservice-Client
   version: 1.0.0
 
 server:
