@@ -24,4 +24,4 @@ security:
 turbine:
   aggregator:
     clusterConfig: MICROSERVICESCLIENT
-  appConfig: microservices_client
+  appConfig: microservice_client
