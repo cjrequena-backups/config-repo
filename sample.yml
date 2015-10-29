@@ -1,3 +1,6 @@
+####################
+# PROFILE unittest #
+####################
 spring:
   profiles: unittest
   datasource:
@@ -11,20 +14,28 @@ spring:
     min: 1
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE UNITTEST
+
+####################
+# PROFILE test     #
+####################
 ---
 spring:
   profiles: test
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: 
+    username: saxxx
+    password: xxxxxxxxxx
     pooledDsFactory: org.leaf.db.ds.PooledDataSourceFactory
     avg: 2
     max: 8
     min: 1
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE TEST
+
+####################
+# PROFILE dev      #
+####################
 ---
 spring:
   profiles: dev
