@@ -1,3 +1,15 @@
+info:
+  description: Sample Application
+  version: 
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    enabled: true
+    sensitive: false
+
 ####################
 # PROFILE unittest #
 ####################

@@ -8,6 +8,7 @@ endpoints:
   shutdown:
     enabled: true
   health:
+    enabled: true
     sensitive: false
 server:
   port: 8888
