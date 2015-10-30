@@ -24,6 +24,9 @@ spring:
     avg: 2
     max: 8
     min: 1
+  redis:
+    host: 127.0.0.1
+    port: 6379
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE UNITTEST
 
@@ -42,6 +45,9 @@ spring:
     avg: 2
     max: 8
     min: 1
+  redis:
+    host: 127.0.0.1
+    port: 6379
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE TEST
 
@@ -60,5 +66,8 @@ spring:
     avg: 2
     max: 8
     min: 1
+  redis:
+    host: 127.0.0.1
+    port: 6379
 test:
   props1: TEST PROPEPERTY FROM CLOUD - DEV
