@@ -17,16 +17,17 @@ spring:
   profiles: unittest
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password: 
-    pooledDsFactory: org.leaf.db.ds.PooledDataSourceFactory
-    avg: 2
-    max: 8
-    min: 1
+    maximumPoolSize: 5
   redis:
     host: 127.0.0.1
     port: 6379
+metrics:
+  riemannHost: grafana.test.hotelbeds
+  riemannPort: 5555
+  threshold: 10
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE UNITTEST
 
@@ -38,16 +39,17 @@ spring:
   profiles: test
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password: 
-    pooledDsFactory: org.leaf.db.ds.PooledDataSourceFactory
-    avg: 2
-    max: 8
-    min: 1
+    maximumPoolSize: 5
   redis:
     host: 127.0.0.1
     port: 6379
+metrics:
+  riemannHost: grafana.test.hotelbeds
+  riemannPort: 5555
+  threshold: 10
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE TEST
 
@@ -59,15 +61,16 @@ spring:
   profiles: dev
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password: 
-    pooledDsFactory: org.leaf.db.ds.PooledDataSourceFactory
-    avg: 2
-    max: 8
-    min: 1
+    maximumPoolSize: 5
   redis:
     host: 127.0.0.1
     port: 6379
+metrics:
+  riemannHost: grafana.test.hotelbeds
+  riemannPort: 5555
+  threshold: 10
 test:
   props1: TEST PROPEPERTY FROM CLOUD - DEV
