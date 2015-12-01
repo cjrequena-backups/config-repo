@@ -14,16 +14,9 @@ server:
   port: 8761
   
 eureka:
-  dashboard:
-    path: services
-    enabled: false
   instance:
     hostname: localhost
-    leaseRenewalIntervalInSeconds: 3
   client:
     registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    renewalPercentThreshold: 0.49
