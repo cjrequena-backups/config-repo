@@ -14,6 +14,15 @@ zuul:
   routes:
     microservice_one:  /microserviceone/**
     microservice_two:  /microservicetwo/**
+zuul:
+  routes:
+    microserviceone:
+     path: /microserviceone/**
+     serviceId: microservice_one
+    microservicetwo:
+     path: /microservicetwo/**
+     serviceId: microservice_two
+      
 server:
   port: 8080
 logging:
