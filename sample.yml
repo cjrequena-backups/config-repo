@@ -11,66 +11,19 @@ endpoints:
     sensitive: false
 
 ####################
-# PROFILE unittest #
+# PROFILE local    #
 ####################
 spring:
-  profiles: unittest
-  datasource:
+  profiles: local
+  redis:
+    host: 127.0.0.1
+    port: 6379
+datasources:
+  datasource1:
     driverClassName: org.h2.Driver
     jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
     password: 
     maximumPoolSize: 5
-  redis:
-    host: 127.0.0.1
-    port: 6379
-metrics:
-  riemannHost: grafana.test.hotelbeds
-  riemannPort: 5555
-  threshold: 10
 test:
-  props1: TEST PROPEPERTY FROM CLOUD - PROFILE UNITTEST
-
-####################
-# PROFILE test     #
-####################
----
-spring:
-  profiles: test
-  datasource:
-    driverClassName: org.h2.Driver
-    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: 
-    maximumPoolSize: 5
-  redis:
-    host: 127.0.0.1
-    port: 6379
-metrics:
-  riemannHost: grafana.test.hotelbeds
-  riemannPort: 5555
-  threshold: 10
-test:
-  props1: TEST PROPEPERTY FROM CLOUD - PROFILE TEST
-
-####################
-# PROFILE dev      #
-####################
----
-spring:
-  profiles: dev
-  datasource:
-    driverClassName: org.h2.Driver
-    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: 
-    maximumPoolSize: 5
-  redis:
-    host: 127.0.0.1
-    port: 6379
-metrics:
-  riemannHost: grafana.test.hotelbeds
-  riemannPort: 5555
-  threshold: 10
-test:
-  props1: TEST PROPEPERTY FROM CLOUD - DEV
+  props1: TEST PROPEPERTY FROM CLOUD - PROFILE LOCAL
