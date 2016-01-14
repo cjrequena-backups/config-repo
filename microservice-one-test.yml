@@ -1,0 +1,16 @@
+info:
+  name: Microservice-ONE
+  description: Microservice-ONE
+  version: 1.0.0
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    enabled: true
+    sensitive: false
+server:
+  port: 9000
+
+test: ESTO ES UN TEST - PROFILE TEST
