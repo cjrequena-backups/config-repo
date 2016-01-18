@@ -1,6 +1,6 @@
 info:
-  name: Microservice-Client
-  description: Microservice-Client
+  name: Microservice-Zuul-Client
+  description: Microservice-Zuul-Client
   version: 1.0.0
 endpoints:
   restart:
