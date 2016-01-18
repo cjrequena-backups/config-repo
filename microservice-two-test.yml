@@ -1,6 +1,6 @@
 info:
-  name: Microservice-ONE
-  description: Microservice-ONE
+  name: Microservice-TWO
+  description: Microservice-TWO
   version: 1.0.0
 endpoints:
   restart:
@@ -11,6 +11,6 @@ endpoints:
     enabled: true
     sensitive: false
 server:
-  port: 9000
-
-test: ESTO ES UN TEST - PROFILE DEV
+  port: 9001
+  
+test: ESTO ES UN TEST - PROFILE TEST

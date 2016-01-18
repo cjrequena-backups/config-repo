@@ -12,3 +12,5 @@ endpoints:
     sensitive: false
 server:
   port: 9001
+  
+test: ESTO ES UN TEST - PROFILE TEST
