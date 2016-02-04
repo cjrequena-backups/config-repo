@@ -1,19 +1,4 @@
-info:
-  name: Microservice-Zuul-Client
-  description: Microservice-Zuul-Client
-  version: 1.0.0
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    enabled: true
-    sensitive: false
-server:
-  port: 9002
- 
 zuulserver:
-  ribbon:
-    listOfServers: localhost:8080
+ ribbon:
+  listOfServers: localhost:8080
   
