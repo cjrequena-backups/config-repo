@@ -1,15 +1,7 @@
 info:
   description: Spring Cloud Samples
   version: 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    enabled: true
-    sensitive: false
-  
+---
 eureka:
   hostname: localhost
   password: s3cr3t
