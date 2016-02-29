@@ -12,8 +12,8 @@ endpoints:
 
 
 crawler:
- maxDepthOfCrawling: -1
- limitPages: -1
+ maxDepthOfCrawling: 1
+ limitPages: 100
  userAgentString: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
  politenessDelay: 200
  socketTimeout: 20000
