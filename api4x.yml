@@ -1,0 +1,22 @@
+info:
+ description: API4X
+ version: 
+endpoints:
+ restart:
+  enabled: true
+ shutdown:
+  enabled: true
+ health:
+  enabled: true
+  sensitive: false
+
+
+crawler:
+ maxDepthOfCrawling: -1
+ limitPages: -1
+ userAgentString: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+ politenessDelay: 200
+ socketTimeout: 20000
+ connectionTimeout: 30000
+ followRedirects: true
+ threadMonitoring: false
