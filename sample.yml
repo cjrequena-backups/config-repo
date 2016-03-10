@@ -8,10 +8,18 @@ spring:
   port: 6379
 datasources:
  primary:
-  dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-  jdbcUrl: jdbc:mysql://localhost:3306/sample
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/sample
   username: root
   password: root
+  poolName: SpringBootHikariCP
   maximumPoolSize: 5
+  minimumIdle: 3
+  maxLifetime: 2000000
+  connectionTimeout: 30000
+  idleTimeout: 30000
+  pool-prepared-statements: true
+  max-open-prepared-statements: 250
+
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE LOCAL
