@@ -8,8 +8,8 @@ spring:
   port: 6379
 datasources:
  primary:
-  driverClassName: org.h2.Driver
-  jdbcUrl: jdbc:mysql://localhost/sample
+  dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+  jdbcUrl: jdbc:mysql://localhost:3306/sample
   username: root
   password: root
   maximumPoolSize: 5
