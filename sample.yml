@@ -1,29 +1,17 @@
-info:
-  description: Sample Application
-  version: 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    enabled: true
-    sensitive: false
-
 ####################
-# PROFILE local    #
+# PROFILE LOCAL    #
 ####################
 spring:
-  profiles: local
-  redis:
-    host: 127.0.0.1
-    port: 6379
+ profiles: local
+ redis:
+  host: 127.0.0.1
+  port: 6379
 datasources:
-  datasource1:
-    driverClassName: org.h2.Driver
-    jdbcUrl: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: 
-    maximumPoolSize: 5
+ primary:
+  driverClassName: org.h2.Driver
+  jdbcUrl: jdbc:mysql://localhost/sample
+  username: root
+  password: root
+  maximumPoolSize: 5
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE LOCAL
