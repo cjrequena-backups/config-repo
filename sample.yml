@@ -10,7 +10,7 @@ datasources:
  primary:
   dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
   driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/sample
+  jdbcUrl: jdbc:mysql://localhost:3306/sample
   username: root
   password: root
   poolName: SpringBootHikariCP
