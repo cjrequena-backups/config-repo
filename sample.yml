@@ -21,6 +21,6 @@ datasources:
   idleTimeout: 30000
   pool-prepared-statements: true
   max-open-prepared-statements: 250
-
+  databaseName: sample
 test:
   props1: TEST PROPEPERTY FROM CLOUD - PROFILE LOCAL
