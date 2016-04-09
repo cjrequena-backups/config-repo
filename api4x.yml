@@ -11,7 +11,7 @@ endpoints:
   sensitive: false
 
 spring:
-  profiles: integration_tests
+  profiles: integration_test
 crawler:
  maxDepthOfCrawling: 0
  limitPages: 1
