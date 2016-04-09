@@ -10,10 +10,11 @@ endpoints:
   enabled: true
   sensitive: false
 
-
+spring:
+  profiles: integration_tests
 crawler:
- maxDepthOfCrawling: 1
- limitPages: 100
+ maxDepthOfCrawling: 0
+ limitPages: 1
  userAgentString: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
  politenessDelay: 200
  socketTimeout: 20000
