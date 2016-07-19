@@ -63,4 +63,4 @@ spring:
 ---
 eureka:
   serviceUrl:
-   defaultZone: http://user:s3cr3t@localhost:8761/eureka/
+   defaultZone: http://localhost:8761/eureka/
