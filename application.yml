@@ -1,11 +1,72 @@
-info:
-  description: Spring Cloud Samples
-  version: 
+# =========================
+# Management configuration
+# =========================
+management:
+ context-path: /manage
+# =========================
+# Health configuration
+# =========================
+# Turn on/off health indicator for config clients.
+health:
+ config:
+  enabled: false
+# =========================
+# Endpoints configuration (AbstractEndpoint subclasses)
+# =========================
+endpoints:
+ enabled: true
+ sensitive: false
+ info:
+  enable: true
+  sensitive: false
+ health:
+  enabled: true
+  sensitive: false
+  time-to-live: 10000
+  status:
+   order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
+ shutdown:
+  enabled: true
+  sensitive: false
+ mappings:
+  enabled: true
+  sensitive: false
+# =========================
+# Swagger configuration
+# =========================
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
+# =========================
+# Logging configuration
+# =========================
+logging:
+  level:
+    org.springframework.cloud: TRACE
+  pattern:
+    console: '%highlight{%p|%d{ISO8601}{GMT}|trace=%X{X-B3-TraceId},span=%X{X-B3-SpanId}|%t|%c{1}|%m%n}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=black, DEBUG=green bold, TRACE=blue}'
+
+# Turn on/off  health indicator on config server
+spring:
+ cloud:
+  config:
+   server:
+    health:
+     enabled: false
+
+# =========================
+# Service discovery configuration
+# =========================
 ---
 eureka:
+ instance:
   hostname: localhost
-  password: s3cr3t
-  client:
-    serviceUrl:
-      defaultZone: http://user:${eureka.password:}@localhost:8761/eureka/
- 
+  metadataMap:
+   cluster: MYCLUSTER
+ client:
+  registerWithEureka: false
+  fecthRegistry: false
+  serviceUrl:
+   defaultZone: http://user:s3cr3t@localhost:8761/eureka/
