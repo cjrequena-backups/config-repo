@@ -45,6 +45,7 @@ springfox:
 logging:
   level:
     org.springframework.cloud: TRACE
+    com.sample: DEBUG
   pattern:
     console: '%highlight{%p|%d{ISO8601}{GMT}|trace=%X{X-B3-TraceId},span=%X{X-B3-SpanId}|%t|%c{1}|%m%n}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=black, DEBUG=green bold, TRACE=blue}'
 
