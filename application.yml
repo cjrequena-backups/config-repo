@@ -57,16 +57,9 @@ spring:
      enabled: false
 
 # =========================
-# Service discovery configuration
+# Service discovery configuration for clients
 # =========================
 ---
 eureka:
- instance:
-  hostname: localhost
-  metadataMap:
-   cluster: MYCLUSTER
- client:
-  registerWithEureka: false
-  fecthRegistry: false
   serviceUrl:
    defaultZone: http://user:s3cr3t@localhost:8761/eureka/
